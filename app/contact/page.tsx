@@ -7,7 +7,7 @@ export default function Contact() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        subject: '',
+        subject: 'Support Request Saudi Arabia VPN',
         message: ''
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -72,7 +72,7 @@ export default function Contact() {
                             <Mail className="h-8 w-8 text-app-green" />
                         </div>
                         <h3 className="text-xl font-bold text-slate-dark mb-2">Email</h3>
-                        <p className="text-slate-dark/70">support@saudiarabiavpn.com</p>
+                        <p className="text-slate-dark/70">info@kuiperslibertas.com</p>
                     </div>
                 </div>
 

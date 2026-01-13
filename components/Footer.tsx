@@ -35,7 +35,7 @@ const Footer = () => {
                         <h3 className="font-semibold text-white uppercase tracking-wider mb-4">Support</h3>
                         <ul className="space-y-2">
                             <li><Link href="/contact" className="hover:text-white/80 transition-colors">Contact Us</Link></li>
-                            <li><a href="mailto:support@saudiarabiavpn.com" className="hover:text-white/80 transition-colors">Email Support</a></li>
+                            <li><a href="mailto:info@kuiperslibertas.com?subject=Support%20request%20Saudi%20Arabia%20VPN" className="hover:text-white/80 transition-colors">Email Support</a></li>
                         </ul>
                     </div>
 
