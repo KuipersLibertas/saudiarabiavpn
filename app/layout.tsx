@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 // import { Geist, Geist_Mono } from "next/font/google"; // Removed as we use generic sans for now or setup Inter separately
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
@@ -22,6 +23,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-TKCVNMJMKQ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TKCVNMJMKQ');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.className} bg-sand-light text-slate-dark antialiased bg-arabic-pattern`}>
         <Navbar />
         <main className="min-h-screen">

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { Shield, Zap, Globe, Lock, Wifi, Smartphone, Check } from "lucide-react";
+import { Shield, Zap, Globe, Lock, Wifi, Smartphone, Check, Apple } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
@@ -73,7 +73,7 @@ export default function Home() {
   const faqs = [
     {
       question: "How do I use Saudi Arabia VPN?",
-      answer: "Simply download the app from Google Play Store, install it, and tap the connect button. The app will automatically connect you to the best server."
+      answer: "Simply download the app from Google Play Store or the Apple App Store, install it, and tap the connect button. The app will automatically connect you to the best server."
     },
     {
       question: "Is Saudi Arabia VPN really free?",
@@ -118,10 +118,13 @@ export default function Home() {
                   Get it on Google Play
                 </a>
                 <a
-                  href="#benefits"
-                  className="inline-flex items-center justify-center bg-white border-2 border-app-green text-app-green px-8 py-4 rounded-full text-lg font-bold hover:bg-app-green hover:text-white transition-all shadow-md"
+                  href="https://apps.apple.com/us/app/sahara-vpn/id6478803973"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
-                  Learn More
+                  <Apple className="mr-2 h-6 w-6" />
+                  Download on App Store
                 </a>
               </div>
               <div className="mt-12 grid grid-cols-3 gap-8 max-w-md mx-auto lg:mx-0">
@@ -226,17 +229,32 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="https://play.google.com/store/apps/details?id=free.vpn.secure.turbo.proxy.hotspot.ksavpn&hl=en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`block text-center py-3 px-6 rounded-full font-bold transition-all ${plan.highlighted
-                    ? 'bg-app-green text-white hover:bg-app-teal shadow-lg'
-                    : 'bg-sand-medium text-slate-dark hover:bg-sand-dark'
-                    }`}
-                >
-                  {plan.cta}
-                </a>
+                <div className="flex flex-col gap-3">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=free.vpn.secure.turbo.proxy.hotspot.ksavpn&hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center justify-center py-3 px-6 rounded-full font-bold transition-all ${plan.highlighted
+                      ? 'bg-app-green text-white hover:bg-app-teal shadow-lg'
+                      : 'bg-sand-medium text-slate-dark hover:bg-sand-dark'
+                      }`}
+                  >
+                    <Shield className="mr-2 h-5 w-5" />
+                    Google Play
+                  </a>
+                  <a
+                    href="https://apps.apple.com/us/app/sahara-vpn/id6478803973"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center justify-center py-3 px-6 rounded-full font-bold transition-all ${plan.highlighted
+                      ? 'bg-slate-900 text-white hover:bg-slate-800 shadow-lg'
+                      : 'bg-slate-800 text-white hover:bg-slate-700'
+                      }`}
+                  >
+                    <Apple className="mr-2 h-5 w-5" />
+                    App Store
+                  </a>
+                </div>
               </div>
             ))}
           </div>
@@ -290,14 +308,26 @@ export default function Home() {
           <p className="text-xl mb-8 opacity-90">
             Join thousands of users who trust Saudi Arabia VPN for their online privacy
           </p>
-          <a
-            href="https://play.google.com/store/apps/details?id=free.vpn.secure.turbo.proxy.hotspot.ksavpn&hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-white text-app-green px-8 py-4 rounded-full text-lg font-bold hover:bg-sand-light transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-          >
-            Download Now - It's Free!
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://play.google.com/store/apps/details?id=free.vpn.secure.turbo.proxy.hotspot.ksavpn&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-white text-app-green px-8 py-4 rounded-full text-lg font-bold hover:bg-sand-light transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              <Shield className="mr-2 h-6 w-6" />
+              Google Play
+            </a>
+            <a
+              href="https://apps.apple.com/us/app/sahara-vpn/id6478803973"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-white text-slate-900 px-8 py-4 rounded-full text-lg font-bold hover:bg-sand-light transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              <Apple className="mr-2 h-6 w-6" />
+              App Store
+            </a>
+          </div>
         </div>
       </section>
     </div>
