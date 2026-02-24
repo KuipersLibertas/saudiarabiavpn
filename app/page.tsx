@@ -1,8 +1,20 @@
 'use client';
 
 import Image from "next/image";
-import { Shield, Zap, Globe, Lock, Wifi, Smartphone, Check, Apple } from "lucide-react";
+import { Shield, Zap, Globe, Lock, Wifi, Smartphone, Check } from "lucide-react";
 import { useState } from "react";
+
+const GooglePlayIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.609 1.814L13.792 12 3.61 22.186a1.5 1.5 0 0 1-.109-.57V2.384c0-.2.038-.39.109-.57zm.922-.628L14.97 11.09l2.784-2.784L5.424.74a1.37 1.37 0 0 0-.893-.054v.5zm11.54 10.003l3.225-3.225 3.63 2.09c.89.513.89 1.379 0 1.892l-3.63 2.09-3.326-3.326.1.48zm-1.1 1.711l-10.44 9.906a1.37 1.37 0 0 0 .893-.054l12.33-6.566-2.783-3.286z" />
+  </svg>
+);
+
+const AppleIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+  </svg>
+);
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -114,7 +126,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-app-green text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-app-teal transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
-                  <Shield className="mr-2 h-6 w-6" />
+                  <GooglePlayIcon className="mr-2 h-6 w-6" />
                   Get it on Google Play
                 </a>
                 <a
@@ -123,7 +135,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
-                  <Apple className="mr-2 h-6 w-6" />
+                  <AppleIcon className="mr-2 h-6 w-6" />
                   Download on App Store
                 </a>
               </div>
@@ -239,7 +251,7 @@ export default function Home() {
                       : 'bg-sand-medium text-slate-dark hover:bg-sand-dark'
                       }`}
                   >
-                    <Shield className="mr-2 h-5 w-5" />
+                    <GooglePlayIcon className="mr-2 h-5 w-5" />
                     Google Play
                   </a>
                   <a
@@ -251,7 +263,7 @@ export default function Home() {
                       : 'bg-slate-800 text-white hover:bg-slate-700'
                       }`}
                   >
-                    <Apple className="mr-2 h-5 w-5" />
+                    <AppleIcon className="mr-2 h-5 w-5" />
                     App Store
                   </a>
                 </div>
@@ -315,7 +327,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-white text-app-green px-8 py-4 rounded-full text-lg font-bold hover:bg-sand-light transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              <Shield className="mr-2 h-6 w-6" />
+              <GooglePlayIcon className="mr-2 h-6 w-6" />
               Google Play
             </a>
             <a
@@ -324,7 +336,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-white text-slate-900 px-8 py-4 rounded-full text-lg font-bold hover:bg-sand-light transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              <Apple className="mr-2 h-6 w-6" />
+              <AppleIcon className="mr-2 h-6 w-6" />
               App Store
             </a>
           </div>
