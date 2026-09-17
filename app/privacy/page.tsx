@@ -87,7 +87,7 @@ export default function Privacy() {
                             <p>
                                 If you have any questions about this Privacy Policy, please contact us at:
                                 <br />
-                                Email: <a href="mailto:privacy@saudiarabiavpn.com" className="text-saudi-green hover:underline">privacy@saudiarabiavpn.com</a>
+                                Email: <a href="mailto:support@saudiarabiavpn.app" className="text-saudi-green hover:underline">support@saudiarabiavpn.app</a>
                             </p>
                         </section>
                     </div>

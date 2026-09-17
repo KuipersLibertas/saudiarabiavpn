@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
         // Email content
         const mailOptions = {
             from: process.env.MAIL_FROM,
-            to: process.env.MAIL_TO || 'info@kuiperslibertas.com', // Send to info@kuiperslibertas.com
+            to: process.env.MAIL_TO || 'support@saudiarabiavpn.app', // Send to support@saudiarabiavpn.app
             replyTo: email, // User's email for easy reply
             subject: `Contact Form: ${subject}`,
             text: `

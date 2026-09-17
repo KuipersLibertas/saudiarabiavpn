@@ -99,7 +99,7 @@ export default function Terms() {
                             <p>
                                 For questions about these Terms and Conditions, please contact us at:
                                 <br />
-                                Email: <a href="mailto:legal@saudiarabiavpn.com" className="text-saudi-green hover:underline">legal@saudiarabiavpn.com</a>
+                                Email: <a href="mailto:support@saudiarabiavpn.app" className="text-saudi-green hover:underline">support@saudiarabiavpn.app</a>
                             </p>
                         </section>
                     </div>
