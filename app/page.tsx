@@ -68,7 +68,7 @@ export default function Home() {
     },
     {
       name: "Premium",
-      price: "$2.99",
+      price: "$3.99",
       period: "/month",
       features: [
         "Ad-free experience",
