@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { Shield, Zap, Globe, Lock, Wifi, Smartphone, Check } from "lucide-react";
+import { Shield, Zap, Globe, Lock, Wifi, Smartphone, Check, Star } from "lucide-react";
 import { useState } from "react";
 
 const GooglePlayIcon = ({ className }: { className?: string }) => (
@@ -195,6 +195,77 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-slate-dark mb-3">{benefit.title}</h3>
                   <p className="text-slate-dark/70">{benefit.description}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Section - Social Proof */}
+      <section className="py-20 bg-gradient-to-b from-[#1B4332] to-[#2D6A4F] text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-arabic-pattern opacity-10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Loved by Users Across the Gulf
+            </h2>
+            <p className="text-lg text-white/70 max-w-2xl mx-auto">
+              Real reviews from real users on Google Play
+            </p>
+            <div className="flex items-center justify-center gap-1 mt-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-6 w-6 fill-yellow-400 text-yellow-400" />
+              ))}
+              <span className="ml-2 text-white/80 text-lg font-semibold">4.8 / 5</span>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                name: "Ahmed K.",
+                review: "Best VPN for gaming in the Gulf. The UAE server gives me really low ping and it just works every time.",
+                initial: "A",
+                color: "bg-amber-700"
+              },
+              {
+                name: "Sara M.",
+                review: "One tap and I'm connected. No account, no setup, no hassle. Exactly what I wanted.",
+                initial: "S",
+                color: "bg-purple-400"
+              },
+              {
+                name: "Khalid R.",
+                review: "Finally a VPN with real Saudi and Gulf servers. Fast and stable every single time.",
+                initial: "K",
+                color: "bg-emerald-600"
+              },
+              {
+                name: "Fatima A.",
+                review: "I feel safe on public WiFi at the airport and cafes now. Connects instantly and stays on.",
+                initial: "F",
+                color: "bg-rose-500"
+              }
+            ].map((review, index) => (
+              <div
+                key={index}
+                className="bg-white text-slate-dark rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`${review.color} w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm`}>
+                    {review.initial}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-sm">{review.name}</p>
+                    <div className="flex gap-0.5">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-slate-dark/80 text-sm leading-relaxed">
+                  &ldquo;{review.review}&rdquo;
+                </p>
               </div>
             ))}
           </div>
