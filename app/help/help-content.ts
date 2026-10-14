@@ -88,6 +88,12 @@ export const HELP_LOCALES: Record<string, HelpLocale> = {
         "body": "Streaming services are required by their licences to show content per country, so they invest heavily in detecting VPN traffic and blocking it. This affects every VPN, not just this app, and a server that works today may be detected tomorrow. Trying a different server sometimes helps, but no VPN can promise access to a particular streaming service, and we cannot guarantee it."
       },
       {
+        "id": "server_shows_wrong_country",
+        "title": "A site or game says I'm not in Saudi Arabia",
+        "summary": "Our Riyadh and Jeddah servers are in Saudi Arabia, but the databases other services look you up in can lag behind.",
+        "body": "Websites and games cannot see where you are. They take your IP address and look it up in a geolocation database they license from a third party, and those databases are updated on their own schedule. Blocks of IP addresses are reassigned between providers from time to time, and when that happens the public records can keep showing the previous location for days, occasionally weeks. During that window our Riyadh and Jeddah servers are physically in Saudi Arabia while some services still read them as somewhere else. It is also why one site shows the right country and another does not at the same moment: they use different databases, updated at different times. There is nothing to fix on your device, and it is not a sign the server has moved. Connecting through the other Saudi city often helps, because Riyadh and Jeddah use different address ranges, and the records catch up on their own."
+      },
+      {
         "id": "free_time_limit",
         "title": "Your free connection time ran out",
         "summary": "Free servers include a set amount of connection time each day.",
@@ -162,6 +168,12 @@ export const HELP_LOCALES: Record<string, HelpLocale> = {
         "title": "خدمة بث لا تعمل",
         "summary": "منصات البث الكبرى تكتشف شبكات VPN وتحجبها بنشاط.",
         "body": "تُلزم التراخيص خدمات البث بعرض المحتوى حسب الدولة، لذا تستثمر كثيرًا في اكتشاف حركة VPN وحجبها. هذا يؤثر على كل شبكات VPN وليس هذا التطبيق وحده، وقد يُكتشف غدًا خادم يعمل اليوم. تجربة خادم آخر تساعد أحيانًا، لكن لا يمكن لأي VPN أن يَعِد بالوصول إلى خدمة بث بعينها، ولا يمكننا ضمان ذلك."
+      },
+      {
+        "id": "server_shows_wrong_country",
+        "title": "موقع أو لعبة تقول إنني لست في السعودية",
+        "summary": "خوادمنا في الرياض وجدة موجودة فعليًا في السعودية، لكن قواعد البيانات التي تعتمد عليها الخدمات الأخرى قد تتأخر في التحديث.",
+        "body": "المواقع والألعاب لا ترى مكانك فعليًا. إنها تأخذ عنوان IP الخاص بك وتبحث عنه في قاعدة بيانات لتحديد المواقع تشتريها من طرف ثالث، وهذه القواعد تُحدَّث وفق جدولها الخاص. تُنقل كتل عناوين IP بين مزودي الخدمة من حين لآخر، وعندها قد تستمر السجلات العامة في إظهار الموقع السابق أيامًا، وأحيانًا أسابيع. خلال هذه الفترة تكون خوادمنا في الرياض وجدة موجودة فعليًا داخل السعودية بينما ما زالت بعض الخدمات تقرؤها على أنها في مكان آخر. ولهذا أيضًا يعرض موقعٌ الدولةَ الصحيحة بينما لا يعرضها آخر في اللحظة نفسها: فكل منهما يستخدم قاعدة بيانات مختلفة حُدِّثت في وقت مختلف. لا يوجد شيء لإصلاحه على جهازك، وهذا لا يعني أن الخادم انتقل. غالبًا ما يفيد الاتصال عبر المدينة السعودية الأخرى، لأن الرياض وجدة تستخدمان نطاقات عناوين مختلفة، كما أن السجلات تُصحَّح من تلقاء نفسها مع الوقت."
       },
       {
         "id": "free_time_limit",
@@ -240,6 +252,12 @@ export const HELP_LOCALES: Record<string, HelpLocale> = {
         "body": "লাইসেন্সের কারণে স্ট্রিমিং সেবাগুলোকে দেশভিত্তিকভাবে কনটেন্ট দেখাতে হয়, তাই তারা VPN ট্র্যাফিক শনাক্ত ও আটকাতে বিপুল বিনিয়োগ করে। এটি কেবল এই অ্যাপ নয়, সব VPN-এর ক্ষেত্রেই প্রযোজ্য, আর আজ যে সার্ভার কাজ করছে কাল সেটি শনাক্ত হয়ে যেতে পারে। অন্য সার্ভার চেষ্টা করলে কখনও কাজ হয়, তবে কোনো VPN-ই নির্দিষ্ট কোনো স্ট্রিমিং সেবায় প্রবেশের প্রতিশ্রুতি দিতে পারে না, আর আমরাও তার নিশ্চয়তা দিতে পারি না।"
       },
       {
+        "id": "server_shows_wrong_country",
+        "title": "কোনো সাইট বা গেম বলছে আমি সৌদি আরবে নেই",
+        "summary": "আমাদের রিয়াদ ও জেদ্দা সার্ভার সৌদি আরবেই আছে, তবে অন্য সেবাগুলো যে ডেটাবেসে খোঁজে সেটি পিছিয়ে থাকতে পারে।",
+        "body": "ওয়েবসাইট আর গেম আসলে আপনি কোথায় আছেন তা দেখতে পায় না। তারা আপনার IP ঠিকানা নিয়ে তৃতীয় পক্ষ থেকে নেওয়া একটি জিওলোকেশন ডেটাবেসে খোঁজ করে, আর সেই ডেটাবেসগুলো নিজেদের সময়সূচি অনুযায়ী হালনাগাদ হয়। IP ঠিকানার ব্লক মাঝেমধ্যে এক সেবাদাতা থেকে আরেকজনের কাছে হস্তান্তরিত হয়, আর তখন প্রকাশ্য রেকর্ডে আগের অবস্থানটাই কয়েক দিন — কখনও কয়েক সপ্তাহ — দেখাতে থাকতে পারে। ওই সময়টুকুতে আমাদের রিয়াদ ও জেদ্দা সার্ভার বাস্তবে সৌদি আরবেই থাকে, যদিও কিছু সেবা সেগুলোকে অন্য কোথাও বলে পড়ে। এ কারণেই একই সময়ে একটি সাইট সঠিক দেশ দেখায় আর আরেকটি দেখায় না: তারা ভিন্ন ডেটাবেস ব্যবহার করে, যেগুলো ভিন্ন সময়ে হালনাগাদ হয়েছে। আপনার ডিভাইসে ঠিক করার কিছু নেই, আর এর মানে এই নয় যে সার্ভার সরে গেছে। অন্য সৌদি শহরটি দিয়ে সংযোগ করলে প্রায়ই কাজ হয়, কারণ রিয়াদ ও জেদ্দা আলাদা ঠিকানা-পরিসর ব্যবহার করে, এবং রেকর্ডগুলো সময়ের সঙ্গে নিজে থেকেই ঠিক হয়ে যায়।"
+      },
+      {
         "id": "free_time_limit",
         "title": "আপনার ফ্রি সংযোগ সময় শেষ হয়ে গেছে",
         "summary": "ফ্রি সার্ভারে প্রতিদিন নির্দিষ্ট পরিমাণ সংযোগ সময় থাকে।",
@@ -314,6 +332,12 @@ export const HELP_LOCALES: Record<string, HelpLocale> = {
         "title": "Ein Streamingdienst funktioniert nicht",
         "summary": "Große Streaming-Plattformen erkennen und blockieren VPNs aktiv.",
         "body": "Streamingdienste müssen ihre Inhalte lizenzbedingt länderweise ausspielen und investieren deshalb viel in das Erkennen und Blockieren von VPN-Verkehr. Das betrifft jedes VPN, nicht nur diese App, und ein Server, der heute funktioniert, kann morgen erkannt sein. Ein anderer Server hilft manchmal, aber kein VPN kann den Zugang zu einem bestimmten Streamingdienst zusichern, und wir können ihn nicht garantieren."
+      },
+      {
+        "id": "server_shows_wrong_country",
+        "title": "Eine Website oder ein Spiel sagt, ich sei nicht in Saudi-Arabien",
+        "summary": "Unsere Server in Riad und Dschidda stehen in Saudi-Arabien, doch die Datenbanken, in denen andere Dienste Sie nachschlagen, hinken manchmal hinterher.",
+        "body": "Websites und Spiele können nicht sehen, wo Sie sind. Sie nehmen Ihre IP-Adresse und schlagen sie in einer Geolokalisierungs-Datenbank nach, die sie von Dritten lizenzieren — und diese Datenbanken werden nach einem eigenen Zeitplan aktualisiert. IP-Adressblöcke werden von Zeit zu Zeit zwischen Anbietern neu vergeben, und dann können die öffentlichen Einträge noch tage-, gelegentlich wochenlang den vorherigen Standort anzeigen. In dieser Zeit stehen unsere Server in Riad und Dschidda physisch in Saudi-Arabien, während manche Dienste sie noch anderswo verorten. Deshalb zeigt auch die eine Seite das richtige Land und die andere im selben Moment nicht: Sie nutzen unterschiedliche Datenbanken mit unterschiedlichen Aktualisierungen. Auf Ihrem Gerät ist nichts zu beheben, und es bedeutet nicht, dass der Server umgezogen wäre. Oft hilft die Verbindung über die jeweils andere saudische Stadt, denn Riad und Dschidda nutzen verschiedene Adressbereiche — und die Einträge holen von selbst auf."
       },
       {
         "id": "free_time_limit",
@@ -392,6 +416,12 @@ export const HELP_LOCALES: Record<string, HelpLocale> = {
         "body": "लाइसेंस के कारण स्ट्रीमिंग सेवाओं को सामग्री देश के अनुसार दिखानी होती है, इसलिए वे VPN ट्रैफ़िक पहचानने और रोकने में बहुत निवेश करती हैं। यह हर VPN पर लागू होता है, सिर्फ़ इस ऐप पर नहीं, और जो सर्वर आज चलता है वह कल पहचाना जा सकता है। कभी-कभी दूसरा सर्वर मदद करता है, लेकिन कोई भी VPN किसी ख़ास स्ट्रीमिंग सेवा तक पहुँच का वादा नहीं कर सकता, और हम इसकी गारंटी नहीं दे सकते।"
       },
       {
+        "id": "server_shows_wrong_country",
+        "title": "कोई वेबसाइट या गेम कहता है कि मैं सऊदी अरब में नहीं हूँ",
+        "summary": "हमारे रियाद और जेद्दा सर्वर सऊदी अरब में ही हैं, लेकिन जिन डेटाबेस में दूसरी सेवाएँ आपको खोजती हैं, वे पीछे रह सकते हैं।",
+        "body": "वेबसाइटें और गेम यह नहीं देख पाते कि आप कहाँ हैं। वे आपका IP पता लेकर उसे किसी तीसरे पक्ष से ली गई जियोलोकेशन डेटाबेस में खोजते हैं, और वे डेटाबेस अपने-अपने समय पर अपडेट होते हैं। IP पतों के ब्लॉक समय-समय पर एक प्रदाता से दूसरे को हस्तांतरित होते हैं, और तब सार्वजनिक रिकॉर्ड कई दिनों तक — कभी-कभी हफ़्तों तक — पिछला स्थान ही दिखाते रह सकते हैं। उस दौरान हमारे रियाद और जेद्दा सर्वर भौतिक रूप से सऊदी अरब में ही होते हैं, जबकि कुछ सेवाएँ उन्हें कहीं और का पढ़ती हैं। इसी वजह से एक ही समय पर कोई साइट सही देश दिखाती है और दूसरी नहीं: दोनों अलग-अलग डेटाबेस इस्तेमाल करती हैं, जो अलग-अलग समय पर अपडेट हुए हैं। आपके डिवाइस में ठीक करने को कुछ नहीं है, और इसका मतलब यह नहीं कि सर्वर कहीं और चला गया। दूसरे सऊदी शहर से जुड़ना अक्सर मदद करता है, क्योंकि रियाद और जेद्दा अलग-अलग एड्रेस रेंज इस्तेमाल करते हैं, और रिकॉर्ड समय के साथ अपने आप सही हो जाते हैं।"
+      },
+      {
         "id": "free_time_limit",
         "title": "आपका मुफ़्त कनेक्शन समय समाप्त हो गया",
         "summary": "मुफ़्त सर्वर में हर दिन तय मात्रा में कनेक्शन समय मिलता है।",
@@ -466,6 +496,12 @@ export const HELP_LOCALES: Record<string, HelpLocale> = {
         "title": "Layanan streaming tidak berfungsi",
         "summary": "Platform streaming besar aktif mendeteksi dan memblokir VPN.",
         "body": "Layanan streaming diwajibkan lisensinya untuk menayangkan konten per negara, sehingga mereka berinvestasi besar untuk mendeteksi dan memblokir lalu lintas VPN. Ini berlaku untuk semua VPN, bukan hanya aplikasi ini, dan server yang berfungsi hari ini bisa terdeteksi besok. Mencoba server lain kadang membantu, tetapi tidak ada VPN yang bisa menjanjikan akses ke layanan streaming tertentu, dan kami tidak dapat menjaminnya."
+      },
+      {
+        "id": "server_shows_wrong_country",
+        "title": "Situs atau game bilang saya tidak berada di Arab Saudi",
+        "summary": "Server kami di Riyadh dan Jeddah berada di Arab Saudi, tetapi basis data yang dipakai layanan lain bisa tertinggal.",
+        "body": "Situs web dan game tidak bisa melihat lokasi Anda. Mereka mengambil alamat IP Anda dan mencarinya di basis data geolokasi yang dilisensikan dari pihak ketiga, dan basis data itu diperbarui menurut jadwalnya sendiri. Blok alamat IP sesekali dialihkan antar penyedia, dan ketika itu terjadi catatan publik bisa tetap menampilkan lokasi sebelumnya selama berhari-hari, kadang berminggu-minggu. Dalam rentang itu server kami di Riyadh dan Jeddah secara fisik berada di Arab Saudi sementara sebagian layanan masih membacanya sebagai tempat lain. Itu juga sebabnya satu situs menampilkan negara yang benar dan situs lain tidak pada saat yang sama: keduanya memakai basis data berbeda yang diperbarui pada waktu berbeda. Tidak ada yang perlu diperbaiki di perangkat Anda, dan ini bukan tanda server berpindah. Menghubungkan lewat kota Saudi yang satunya sering membantu, karena Riyadh dan Jeddah memakai rentang alamat yang berbeda, dan catatannya akan menyusul dengan sendirinya."
       },
       {
         "id": "free_time_limit",
@@ -544,6 +580,12 @@ export const HELP_LOCALES: Record<string, HelpLocale> = {
         "body": "Os serviços de streaming são obrigados por suas licenças a exibir conteúdo por país, por isso investem muito em detectar e bloquear tráfego de VPN. Isso afeta todas as VPNs, não só este aplicativo, e um servidor que funciona hoje pode ser detectado amanhã. Tentar outro servidor às vezes ajuda, mas nenhuma VPN pode prometer acesso a um serviço de streaming específico, e não podemos garanti-lo."
       },
       {
+        "id": "server_shows_wrong_country",
+        "title": "Um site ou jogo diz que não estou na Arábia Saudita",
+        "summary": "Nossos servidores de Riade e Jidá ficam na Arábia Saudita, mas as bases de dados que outros serviços consultam podem estar desatualizadas.",
+        "body": "Sites e jogos não conseguem ver onde você está. Eles pegam o seu endereço IP e o consultam em uma base de dados de geolocalização licenciada de terceiros, e essas bases são atualizadas no ritmo de cada fornecedor. Blocos de endereços IP são transferidos entre provedores de tempos em tempos e, quando isso acontece, os registros públicos podem continuar mostrando a localização anterior por dias, às vezes semanas. Nesse período nossos servidores de Riade e Jidá estão fisicamente na Arábia Saudita enquanto alguns serviços ainda os leem como estando em outro lugar. É também por isso que um site mostra o país certo e outro não no mesmo momento: eles usam bases diferentes, atualizadas em momentos diferentes. Não há nada a corrigir no seu aparelho, e isso não significa que o servidor mudou de lugar. Conectar pela outra cidade saudita costuma ajudar, porque Riade e Jidá usam faixas de endereços diferentes, e os registros se atualizam sozinhos com o tempo."
+      },
+      {
         "id": "free_time_limit",
         "title": "Seu tempo de conexão gratuito acabou",
         "summary": "Os servidores gratuitos incluem uma quantidade de tempo por dia.",
@@ -618,6 +660,12 @@ export const HELP_LOCALES: Record<string, HelpLocale> = {
         "title": "Стриминговый сервис не работает",
         "summary": "Крупные стриминговые платформы активно выявляют и блокируют VPN.",
         "body": "Лицензии обязывают стриминговые сервисы показывать контент по странам, поэтому они вкладывают много сил в обнаружение и блокировку VPN-трафика. Это касается любого VPN, а не только этого приложения, и сервер, работающий сегодня, завтра может быть распознан. Иногда помогает другой сервер, но ни один VPN не может обещать доступ к конкретному стриминговому сервису, и мы не можем это гарантировать."
+      },
+      {
+        "id": "server_shows_wrong_country",
+        "title": "Сайт или игра пишет, что я не в Саудовской Аравии",
+        "summary": "Наши серверы в Эр-Рияде и Джидде находятся в Саудовской Аравии, но базы данных, по которым вас определяют другие сервисы, обновляются с задержкой.",
+        "body": "Сайты и игры не видят, где вы находитесь. Они берут ваш IP-адрес и ищут его в базе геолокации, купленной у стороннего поставщика, а такие базы обновляются по собственному графику. Блоки IP-адресов время от времени передаются от одного провайдера другому, и тогда публичные записи могут ещё несколько дней, а иногда и недель, показывать прежнее местоположение. В этот период наши серверы в Эр-Рияде и Джидде физически находятся в Саудовской Аравии, хотя некоторые сервисы по-прежнему определяют их иначе. По той же причине один сайт показывает верную страну, а другой в тот же момент — нет: они используют разные базы, обновлённые в разное время. На вашем устройстве чинить нечего, и это не значит, что сервер переехал. Часто помогает подключение через другой саудовский город, поскольку Эр-Рияд и Джидда используют разные диапазоны адресов, а записи со временем обновляются сами."
       },
       {
         "id": "free_time_limit",
@@ -696,6 +744,12 @@ export const HELP_LOCALES: Record<string, HelpLocale> = {
         "body": "Giấy phép buộc các dịch vụ phát trực tuyến phải phân phối nội dung theo từng quốc gia, nên họ đầu tư rất nhiều vào việc phát hiện và chặn lưu lượng VPN. Điều này ảnh hưởng tới mọi VPN chứ không riêng ứng dụng này, và một máy chủ hôm nay dùng được thì ngày mai có thể bị phát hiện. Thử máy chủ khác đôi khi có ích, nhưng không VPN nào có thể hứa hẹn truy cập được một dịch vụ phát trực tuyến cụ thể, và chúng tôi không thể bảo đảm điều đó."
       },
       {
+        "id": "server_shows_wrong_country",
+        "title": "Một trang web hoặc trò chơi nói rằng tôi không ở Ả Rập Xê Út",
+        "summary": "Máy chủ Riyadh và Jeddah của chúng tôi đặt tại Ả Rập Xê Út, nhưng cơ sở dữ liệu mà các dịch vụ khác tra cứu có thể cập nhật chậm.",
+        "body": "Các trang web và trò chơi không nhìn thấy bạn đang ở đâu. Họ lấy địa chỉ IP của bạn và tra trong một cơ sở dữ liệu định vị mua từ bên thứ ba, và những cơ sở dữ liệu đó được cập nhật theo lịch riêng của họ. Các khối địa chỉ IP thỉnh thoảng được chuyển giao giữa các nhà cung cấp, và khi điều đó xảy ra, hồ sơ công khai có thể vẫn hiển thị vị trí cũ trong nhiều ngày, đôi khi nhiều tuần. Trong khoảng thời gian đó, máy chủ Riyadh và Jeddah của chúng tôi thực sự nằm tại Ả Rập Xê Út trong khi một số dịch vụ vẫn đọc ra nơi khác. Đó cũng là lý do một trang hiển thị đúng quốc gia còn trang khác thì không, ngay cùng một thời điểm: họ dùng các cơ sở dữ liệu khác nhau, cập nhật vào những thời điểm khác nhau. Không có gì cần sửa trên thiết bị của bạn, và điều này không có nghĩa là máy chủ đã chuyển đi. Kết nối qua thành phố Ả Rập Xê Út còn lại thường có ích, vì Riyadh và Jeddah dùng các dải địa chỉ khác nhau, và hồ sơ sẽ tự cập nhật theo thời gian."
+      },
+      {
         "id": "free_time_limit",
         "title": "Thời gian kết nối miễn phí đã hết",
         "summary": "Máy chủ miễn phí có một lượng thời gian kết nối mỗi ngày.",
@@ -770,6 +824,12 @@ export const HELP_LOCALES: Record<string, HelpLocale> = {
         "title": "某个流媒体服务无法使用",
         "summary": "大型流媒体平台会主动检测并屏蔽 VPN。",
         "body": "流媒体服务受授权条款约束，必须按国家分发内容，因此投入大量资源检测并屏蔽 VPN 流量。这影响所有 VPN，并非仅限本应用，今天可用的服务器明天可能就被识别。换一个服务器有时会有帮助，但没有任何 VPN 能承诺访问某个特定的流媒体服务，我们也无法保证。"
+      },
+      {
+        "id": "server_shows_wrong_country",
+        "title": "某个网站或游戏说我不在沙特阿拉伯",
+        "summary": "我们的利雅得和吉达服务器确实位于沙特阿拉伯，但其他服务所查询的数据库可能更新滞后。",
+        "body": "网站和游戏无法真正看到您身在何处。它们取用您的 IP 地址，到从第三方获得授权的地理定位数据库中查询，而这些数据库各按自己的节奏更新。IP 地址段会不时在运营商之间转让，发生之后，公开记录可能还会继续显示此前的位置，持续数天、偶尔数周。在此期间，我们的利雅得和吉达服务器在实际位置上仍在沙特阿拉伯，而部分服务仍将其读作别处。这也解释了为何同一时刻一个网站显示正确的国家、另一个却不然：它们使用的是不同的数据库，更新时间也不同。您的设备上没有什么需要修复，这也不代表服务器迁移了。改用另一座沙特城市连接往往会有帮助，因为利雅得和吉达使用不同的地址段，而相关记录会随时间自行更正。"
       },
       {
         "id": "free_time_limit",
