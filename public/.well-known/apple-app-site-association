@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["2QGA6ZV55A.free.vpn.secure.turbo.proxy.hotspot.saharavpn"],
+        "components": [
+          {
+            "/": "/go/*",
+            "comment": "Deep links into the app. Nothing else on this domain is claimed, so the help pages keep opening in the browser."
+          }
+        ]
+      }
+    ]
+  }
+}
