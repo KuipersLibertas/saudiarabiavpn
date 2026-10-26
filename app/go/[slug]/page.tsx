@@ -16,6 +16,13 @@ const DESTINATIONS = {
     blurb:
       "Do not let hackers scare you. Open this link on your iPhone or iPad with Sahara VPN installed and it takes you straight to the offer.",
   },
+  // One link for every seasonal event (White Friday, Ramadan, Eid, ...): the
+  // app decides which offer it opens, so this copy must not name an event.
+  event: {
+    title: "Limited-time offer",
+    blurb:
+      "Our current offer is waiting for you in the app. Open this link on your iPhone or iPad with Sahara VPN installed and it takes you straight there.",
+  },
 } as const;
 
 type Slug = keyof typeof DESTINATIONS;
